@@ -1,0 +1,2 @@
+# Wiki
+Cache Wiki pages
