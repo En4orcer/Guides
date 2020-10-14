@@ -13,6 +13,20 @@ Public Nodes help decentralise the network because more independant people are c
 Public Nodes are also used to help people in a different geo-location get a better connection with the Blockchain itself.
 Read about [Ping](https://en.wikipedia.org/wiki/Ping_(networking_utility)) to learn why this would be an advantage if more people have better ping across the network.
 
+There are incentives for people running public nodes with the built-in features it has to offer.
+With 2 commands, you can set your node up to charge a fee whenever someone using your node wishes to make a transaction.
+The 2 commands are:
+```
+--fee-address=<address>
+--fee-amount=<amountInAtomicUnits>
+```
+
+`--fee-address` can be set to your primary wallet address.
+You cannot use integrated addresses when using this feature!
+We use atomic units to calculate the node fee which means instead of typing `--fee-amount=1.23456`, you would type `--fee-amount=123456`.
+That being said, there is a cap on how much a node operator can charge p/transaction so people are not over-charged when using these public services run by 3rd parties.
+The current cap is `1.00000 $CXCHE`, 1 full unit of the coin which is `100000` in atomic units.
+
 > [Note] A common error when setting up a public node is a FIREWALL issue.
 > Please make sure your ports are open so external machines can read the data you're trying to provide
 
