@@ -1,17 +1,17 @@
 ## Cache Wallet Guide
 
 **Table of contents:**
-- [Wallet Options]()
-  - [Create Wallet]()
-  - [Import Wallet]()
-    - [Import with Seed]()
-    - [Import with Secret Keys]()
-  - [Open Wallet]()
-- [Node Connection]()
-  - [Local Node Connection]()
-  - [Remote Node Conncection]()
-- [Transfer]()
-- [Backup Wallet]()
+- [Wallet Options](https://github.com/Cache-core/Guides/blob/master/cache-wallet.md#wallet-options)
+  - [Create Wallet](https://github.com/Cache-core/Guides/blob/master/cache-wallet.md#create-wallet)
+  - [Import Wallet](https://github.com/Cache-core/Guides/blob/master/cache-wallet.md#import-wallet)
+    - [Import with Seed](https://github.com/Cache-core/Guides/blob/master/cache-wallet.md#s---import-using-seed-phrase)
+    - [Import with Secret Keys](https://github.com/Cache-core/Guides/blob/master/cache-wallet.md#i---import-using-view--spend-key)
+  - [Open Wallet](https://github.com/Cache-core/Guides/blob/master/cache-wallet.md#open-wallet)
+- [Node Connection](https://github.com/Cache-core/Guides/blob/master/cache-wallet.md#node-connection)
+  - [Local Node Connection](https://github.com/Cache-core/Guides/blob/master/cache-wallet.md#local-node-conncection)
+  - [Remote Node Conncection](https://github.com/Cache-core/Guides/blob/master/cache-wallet.md#remote-node-conncection)
+- [Transfer](https://github.com/Cache-core/Guides/blob/master/cache-wallet.md#transfer)
+- [Backup Wallet](https://github.com/Cache-core/Guides/blob/master/cache-wallet.md#backup-wallet)
 
 > We show the private keys of an empty wallet here. Please never share them with anyone else, this is done as an example for the expected output.
 
