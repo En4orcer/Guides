@@ -1,9 +1,9 @@
 ## Cache Daemon Guide
 
 **Table of contents:**
-- [Public Node]()
-- [Local Node]()
-- [Useful Daemon Commands]()
+- [Public Node](https://github.com/Cache-core/Guides/blob/master/cache-daemon.md#public-node)
+- [Local Node](https://github.com/Cache-core/Guides/blob/master/cache-daemon.md#local-node)
+- [Useful Daemon Commands](https://github.com/Cache-core/Guides/blob/master/cache-daemon.md#useful-daemon-commands)
 
 ***
 
