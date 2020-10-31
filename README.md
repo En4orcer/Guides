@@ -7,6 +7,7 @@
 ### User Guides List
 
 - [Cache Daemon Client](https://github.com/Cache-core/Guides/blob/master/cache-daemon.md)
+- [Cache Wallet Client](https://github.com/Cache-core/Guides/blob/master/cache-wallet.md)
 
 ***
 
