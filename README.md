@@ -19,6 +19,12 @@
 
 ***
 
+### Misc
+
+- [Emission Guide](https://github.com/Cache-core/Guides/blob/master/emission.md)
+
+***
+
 ### F.A.Q's
 
 > Both [Cache Daemon Client Guide](https://github.com/Cache-core/Guides/blob/master/cache-daemon.md) and [Cache Wallet Client Guide](https://github.com/Cache-core/Guides/blob/master/cache-wallet.md) should also cover a lot of user F.A.Q's
