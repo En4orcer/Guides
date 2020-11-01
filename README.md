@@ -6,6 +6,7 @@
 
 ### User Guides List
 
+- [Build Core Clients](https://github.com/Cache-core/Guides/blob/master/build-core.md)
 - [Cache Daemon Client](https://github.com/Cache-core/Guides/blob/master/cache-daemon.md)
 - [Cache Wallet Client](https://github.com/Cache-core/Guides/blob/master/cache-wallet.md)
 
@@ -20,7 +21,7 @@
 
 ### F.A.Q's
 
-> Both [Cache Daemon Client Guide](https://github.com/Cache-core/Guides/blob/master/cache-daemon.md) and [Cache Wallet Client Guide](https://github.com/Cache-core/Guides/blob/master/cache-wallet.md) should also cover a lot of F.A.Q's
+> Both [Cache Daemon Client Guide](https://github.com/Cache-core/Guides/blob/master/cache-daemon.md) and [Cache Wallet Client Guide](https://github.com/Cache-core/Guides/blob/master/cache-wallet.md) should also cover a lot of user F.A.Q's
 
 - **How do you deposit coin onto the Cache blockchain?**
   - Currently, banking is only implemented in our Desktop wallet application. Once the wallet has finished synchronizing, you will then be able to click the "Banking" option within the side menu and continue to create a deposit.
