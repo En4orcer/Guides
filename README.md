@@ -21,6 +21,7 @@
 
 ### Misc
 
+- [Banking Guideline](https://github.com/Cache-core/Guides/blob/master/banking.md)
 - [Emission Guide](https://github.com/Cache-core/Guides/blob/master/emission.md)
 - [Cache Project Initial Minor Paper](https://github.com/Cache-core/Guides/blob/master/project.md)
 
