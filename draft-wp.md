@@ -203,3 +203,59 @@ increase in the crypto asset price, taking into account the Moore’s Law adjust
 keys loss, a reduction in the issuance of crypto assets in this way increases its price.
 We have to mention that this equation gives crypto asset fair price estimate and does not
 take into account the speculative component, the so-called pumps and dumps.
+
+### Encrypted messages
+#### Motivation
+Imagine, an encrypted untraceable messaging platform where even the fact of message sending is unknown, only recipient can decrypt his message and message can be stored in blockchain forever.
+Cryptocurrency is about digital money and how the money flows between parties. However bare transfers are sometimes just inconvenient, the payee needs to get some additional
+information from the payer, like secret text messages. For example, an on-line store supports
+a ”money-back feature” and its customer should be able to attach his refund address to his
+transaction. Alternatively, when you make a donation you may want to specify how your funds
+should be distributed between all possible charities (just like Humble Bundle allows you to
+divide your purchase between games’ developers).
+The urgency of this feature is supported by the fact that some cryptocurrencies have already
+implemented it: Bitcoin, Florin, Cosmoscoin etc. But their developers did not attend
+to convenience of private communication. Whilst there is no problem with attaching a plain-text
+message, it is tricky to provide an easy-to-use way of handling of secret data.
+Both parties can share some symmetric private key and use it for encrypting and decrypting
+messages. But this method is only suitable for a long-time communication and/or repeated
+transactions. Another way: they can use a public key encryption scheme, but such algorithms
+are less effective in case of arbitrary-length messages (when compared with symmetric crypto).
+We propose a protocol for transferring encrypted messages within transactions, which does
+not require any preliminary data exchange. Also it is based on the modern symmetric stream
+cipher — ChaCha20 — and results in excellent performance.
+
+#### The protocol
+We are now to describe step-by-step the protocol for encrypting and decrypting a message.
+The message is being sent from Alice to Bob. Firstly we will provide the high level scheme:
+1. Alice generates common secret via Diffie-Hellman key exchange protocol in the same
+CryptoNote one-time keys are generated.
+2. She encrypts her message under this key and sends the transaction.
+3. Bob re-generates the common secret, just like he recovers CryptoNote outputs private
+keys.
+4. He tries to decrypt all available messages in the transaction and determines (via a checksum) those which were sent to him.
+
+#### Encryption
+Let (A, B) be Bob’s Cache address and H() to be cryptographic hash function Keccak.
+Alice generates a random value r and computes the common secret x = H(r · B). Additionally she stores R = r · G.
+Then Alice takes the plain-text message M and adds four zero bytes at the end. The
+motivation of this step will be shown later. After that she uses x as a key for stream cipher
+ChaCha20 and gets a pseudo-random bit sequence S.
+The resulting encrypted message is E = M ⊕ S. It is stored in the transaction along with
+R.
+
+#### Decryption
+Bob receives the transaction and re-generates the common secret as x = H(b · R). With x
+he recovers the same sequence S.
+Then for every encrypted message Ei he computes Mi = Ei ⊕ S. Mi which have the last
+four bytes zeroed indicated they were sent to him, i.e. decrypted correctly. The others may
+belong to other recipients of the transaction or even be Alice’s comments for herself.
+
+#### Separate messages
+Our solution does not rely on an output properties: payee, amount, any other content. That
+means that transaction comments may be used separately with money transfer, i.e. like just
+private messages (without payments). Alice can send many messages to different addresses in
+a single transaction which sends some funds to herself. Due to CryptoNote’s unlinkabile onetime keys no one can prove that there were no money transfer at all: i.e. private message via
+transaction is indistinguishable from ordinary transactions.
+Cache can serve as a service of private encrypted communication, as well as
+secure money transfers.
